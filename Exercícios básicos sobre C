@@ -1,4 +1,5 @@
 // Exercício 1 - Faça um programa que leia um número inteiro e o imprima.
+
 int main()
 {
     int num;
@@ -12,6 +13,7 @@ int main()
 }
 
 //Exercício 2 - Peça ao usuário para digitar três valores inteiros e imprima a soma deles.
+
 int main()
 {
     int num1;
@@ -36,6 +38,7 @@ int main()
 }
 
 //Exercício 3 - Leia um número real e imprima o resultado do quadrado desse número
+
 int main()
 {
     int num;
@@ -49,6 +52,7 @@ int main()
 }
 
 //Exercício 4 - Leia um número real e imprima a quinta parte deste número.
+
 int main()
 {
     int num;
@@ -62,6 +66,7 @@ int main()
 }
 
 //Exercício5. Leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+
 int main()
 {
     int num;
@@ -75,6 +80,7 @@ int main()
 }
 
 //Exercício6. Faça um programa que receba dois números e mostre qual deles é o maior.
+
 int main()
 {
     int num1;
@@ -99,6 +105,7 @@ int main()
 }
 
 //Exercício7. Faça um programa que receba um número inteiro e verifique se este número e par ou ímpar.
+
 int main()
 {
     int num;
@@ -121,6 +128,7 @@ int main()
 /*Exercício8. Escreva um programa que, dados dois números inteiros, mostre na tela o maior deles, assim
 *como a diferença existente entre ambos.
 */
+
 int main()
 {
     int num1;
@@ -158,6 +166,50 @@ int main()
 *Opção:
 */
 
+int main()
+{
+    int escolha;
+    int num1;
+    int num2;
+    
+    printf("Digite o primeiro numero para a opação: ");
+    scanf("%d", &num1);
+    
+    printf("Digite o segundo numero para a operação: ");
+    scanf("%d", &num2);
+    
+    printf("esolha um uma operção para se fazer: \n\n");
+    printf("Para soma escolha (0) \n");
+    printf("Para subtração escolha (1) \n");
+    printf("Para multiplicação escolha (2) \n");
+    printf("Para divisão escolha (3): \n");
+    scanf("%d", &escolha);
+    
+    switch(escolha)
+    {
+        case 0:
+            printf ("A soma dos numero é %d", num1 + num2);
+            break;
+        case 1:
+            printf ("A subtração dos numeros é %d", num1 - num2);
+            break;
+        case 2: 
+            printf ("A multiplicação dos numeros é %d", num1 * num2);
+            break;
+        case 3:
+            if(num1 > num2)
+            {
+            printf ("A divisão dos numeros é %d", num1 / num2);
+            }
+            else
+            {
+                printf ("Não tem como fazer essa divisão");
+            }
+            break;
+    }
+
+    return 0;
+}
 
 /*Exercício10. Leia a idade e o tempo de serviço de um trabalhador e escreva se ele pode ou não se
 *aposentar. As condições para aposentadoria são:
@@ -166,6 +218,28 @@ int main()
 *• Ou ter pelo menos 60 anos e trabalhado pelo menos 25 anos.
 */
 
+int main()
+{
+    int i;
+    int t;
+    
+    printf("Para saber se o funcionario pode se aposantar precisamos saber da idade: ");
+    scanf("%d", &i);
+    
+    printf("precisamos saber o tempo de serviço: ");
+    scanf("%d", &t);
+    
+    if(i >= 65 || t >= 30 || (i >= 60 && t >=25))
+    {
+        printf("Poderá se aposentar!!");
+    }
+    else
+    {
+        printf("não poderá se aposentar!!");
+    }
+
+    return 0;
+}
 
 /*Exercício11. Faça um programa que determine o mostre os cinco primeiros múltiplos de 3, considerando
 *números maiores que 0.
@@ -173,20 +247,92 @@ int main()
 *Professor: Cássio Capucho Peçanha
 */
 
+int main()
+ {  
+    int c;
+    
+    for (c = 0; c < 5; c++)
+    {
+        printf("3 x %d = %d \n", c , 3 * c);
+    }
+
+    return 0;
+}
 
 /*Exercício12. Escreva um programa que escreva na tela, de 1 até 100, de 1 em 1, 3 vezes. A primeira vez
 *deve usar a estrutura de repetição for, a segunda while, e a terceira do while.
 */
 
+int main()
+ {  
+    int f;
+    int w = 0;
+    int dw = 0;
+    for (f = 0; f < 101; f++)
+    {
+        printf(" %d \n", f);
+    }
+    
+    while(w <= 100)
+    {
+        printf("%d \n", w);
+        w ++;
+    }
+    
+    do{
+        printf("%d \n", dw);
+        dw++;
+    }
+    while(dw <= 100);
+
+    return 0;
+}
+
 /*Exercício13. Faça um algoritmo utilizando o comando while que mostra uma contagem regressiva na tela,
 *iniciando em 10 e terminando em 0. Mostrar uma mensagem "FIM!” após a contagem.
 */
 
+int main()
+ {  
+    int w = 10;
+    
+    while(w >= 0)
+    {
+        printf("%d \n", w);
+        w --;
+    }
+    
+    printf("FIM !!");
+    
+    return 0;
+}
 
 /*Exercício14. Faça um programa que leia um número inteiro positivo par N e imprima todos os números
-*Exercíciopares de 0 até N em ordem decrescente.
+*pares de 0 até N em ordem decrescente.
 */
 
+int main()
+ {  
+    int n;
+    
+    printf("digite um numero: ");
+    scanf("%d", &n);
+    
+    while(n >= 0)
+    {
+        if(n % 2 == 0)
+        {
+            printf("%d ", n);
+            n--;
+        }
+        else
+        {
+            n--;
+        }
+    }
+    
+    return 0;
+}
 
 /*Exercício15. Elabore um programa que faça leitura de vários números inteiros, até que se digite um
 *número negativo. O programa tem que retornar o maior e o menor número lido.
