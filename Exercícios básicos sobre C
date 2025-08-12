@@ -338,6 +338,56 @@ int main()
 *número negativo. O programa tem que retornar o maior e o menor número lido.
 */
 
+int main()
+ {  
+    int i, c;
+    int n[i];
+    int maior;
+    int menor;
+    int sinal;
+    
+  
+    do{
+        printf("digite um numero! \n");
+        scanf("%d", &n[i]);
+        
+        //c = n[0];
+        
+        if(n[i] < 0)
+        {
+            
+            printf("O final do Vetor foi com o numero: %d ", n[i - 1]);
+            sinal = 1;
+            
+        }
+        else
+        {
+            printf("Numero positivo, invalido para finalizar!!\n");
+            
+        }
+        
+        /*for(c = 1;c <= i; c++)
+        {
+            if(c > n[i])
+            {
+                maior = c;
+            }
+            else if(c < n[i])
+            {
+                maior = n[i];
+            }
+            
+        }
+        */
+        i++;
+    }
+    while(sinal != 1);
+
+    printf("\nO maior numero do vertor foi %d", maior);
+    
+    return 0;
+}
+deu erro essa questão (tirar  duvida com cassio)
 
 /*Exercício16. Faça um programa que possua um vetor denominado A que armazene 6 números inteiros. O
 *programa deve executar os seguintes passos:
@@ -348,17 +398,81 @@ int main()
 *• Mostre na tela cada valor do vetor A, um em cada linha.
 */
 
+int main()
+ {  
+    int A[6] = {1, 0, 5, -2, -5, 7};
+    int c;
+    int soma;
+
+    soma = A[0];
+    soma = soma + A[1];
+    soma =  soma + A[5];
+    
+    printf("A soma do numero A[0], A[1] e A[5] é : %d ", soma);
+    
+    do
+    {
+        if(c == 0)
+        {
+            printf("Os numeros do vetor são:\n%d \n", A[c]);
+            c++;
+        }
+        else if(c == 1){
+            printf("%d \n", A[c]);
+            c++;
+        }
+        else if(c == 2){
+            printf("%d \n", A[c]);
+            c++;
+        }
+        else if(c == 3){
+            printf("%d \n", A[c]);
+            c++;
+        }
+        else if(c == 4){
+            A[4] = 100;
+            printf("%d \n", A[c]);
+            c++;
+        }
+        else{
+            printf("%d \n", A[c]);
+            c++;
+        }
+    }
+    while(c <= 5);
+    
+    return 0;
+}
 
 //Exercício17.Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos.
 
+int main()
+{
+	int A[6];
+	int c;
+
+	printf("digite os 6 numeros inteiros: \n");
+	for(c = 0; c < 6; c++)
+	{
+		scanf("%d", &A[c]);
+	}
+
+	for(c = 0; c < 6 ; c++) 
+	{
+        printf("%d ", A[c]);
+	}
+	return 0;
+}
 
 //Exercício18. Leia um vetor de 10 posições, depois contar e escrever quantos valores pares ele possui.
+
 
 
 /*Exercício19. Faça um programa que leia dois vetores de 10 elementos. Crie um vetor que seja a
 *intersecção entre os 2 vetores anteriores, ou seja, que contém apenas os números que estão
 *em ambos os vetores. Não deve conter números repetidos.
 */
+
 
 
 /*Exercício20. Escreva um programa que leia um número inteiro positivo n e em seguida imprima n linhas do
@@ -371,4 +485,5 @@ int main()
 *1 5 10 10 5 1
 *...
 */
+
 
