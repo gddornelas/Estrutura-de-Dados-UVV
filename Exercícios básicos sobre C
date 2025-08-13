@@ -340,54 +340,40 @@ int main()
 
 int main()
  {  
-    int i, c;
-    int n[i];
-    int maior;
-    int menor;
-    int sinal;
-    
+    int n;
+    int maior = 0; 
   
     do{
         printf("digite um numero! \n");
-        scanf("%d", &n[i]);
+        scanf("%d", &n);
         
-        //c = n[0];
         
-        if(n[i] < 0)
+        if(n < 0)
         {
             
-            printf("O final do Vetor foi com o numero: %d ", n[i - 1]);
-            sinal = 1;
-            
+            printf("O final do Vetor foi com o numero: %d ", n);
+            break;
         }
         else
         {
             printf("Numero positivo, invalido para finalizar!!\n");
             
-        }
-        
-        /*for(c = 1;c <= i; c++)
-        {
-            if(c > n[i])
+            if( n > maior)
             {
-                maior = c;
-            }
-            else if(c < n[i])
-            {
-                maior = n[i];
+                maior = n;
             }
             
+            
         }
-        */
-        i++;
+        
     }
-    while(sinal != 1);
+    while(1);
 
-    printf("\nO maior numero do vertor foi %d", maior);
+    printf("\nO maior numero digitado foi %d", maior);
+    printf("\nO menor numero digitado foi %d", n);
     
     return 0;
 }
-deu erro essa questão (tirar  duvida com cassio)
 
 /*Exercício16. Faça um programa que possua um vetor denominado A que armazene 6 números inteiros. O
 *programa deve executar os seguintes passos:
