@@ -1,0 +1,25 @@
+int main()
+{
+   int *p, *p1; // declaração de pomteiro se declara com " *(nome do ponteiro desejado) " e o * se ulriliza novamente par ao print;
+   int c = 10, d=20;
+   
+   p = &c; // a mesma coisa que estar falando que o valor que está dentro do ponteiro 
+           //é o endereço de memoria do "c" dentrdo do ponteiro p;
+           
+   p1 = &d; // para ultilizar o ponteiro dureante o codigo não precisa do *;
+   
+   /*
+   *
+   * ---QUANDO FOR ULTILIZAR NO PRINTF---
+   *
+   * p -> endereço de momoria de "c";
+   * &p -> endereço de momoria da variavel que está referenciando "c";
+   * *p -> valor da variavel referenciada;
+   */
+   
+   *p1 = *p; // equivalente a "d = c";
+   
+   // coneversão de ponteiro é (printf("oque deseja printar ", *("tipo de variavel" *) nome_do_ponteiro).
+   
+    return 0;
+}
